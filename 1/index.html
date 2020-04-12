@@ -7,11 +7,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
+
 <body>
     <div class="body">
         <main class="main">
+            <section class="menu">
+              
+              <input type="checkbox" id="menu" class="checkbox3 visuallyHidden">
+        <label for="menu">
+            <div class="hamburger hamburger3">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+            </div>
+        </label>
+               <!--                 <label for="menu">
+                    <div class="hamburger hamburger3">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                        <span class="bar bar3"></span>
+                        <span class="bar bar4"></span>
+                    </div>
+                </label>
+                <input type="checkbox" id="menu" class="checkbox3 visuallyHidden"> -->
+
+
+                <ul class="menu__list">
+                    <li class="menu__items"><a href="#" class="menu__items-link">Один</a></li>
+                    <li class="menu__items "><a href="#" class="menu__items-link">Два</a></li>
+                    <li class="menu__items"><a href="#" class="menu__items-link">Три</a></li>
+                    <li class="menu__items"><a href="#" class="menu__items-link">Четыре</a></li>
+                    <li class="menu__items"><a href="#" class="menu__items-link">Пять</a></li>
+                </ul>
+            </section>
             <section class="hi">
                 <div class="hi__block">
                     <h2 class="hi__block-title">Привет, друг!</h2>
@@ -38,28 +68,28 @@
                 <h3 class="column__title title">Колонки с flex-контейнерами</h3>
                 <div class="column__block">
                     <div class="column__items">
-                        <div class="column__items-img"><img src="img/image_column_1.jpg" alt="image_column" ></div>
+                        <div class="column__items-img"><img src="img/image_column_1.jpg" alt="image_column"></div>
                         <div class="column__items-block">
                             <h4 class="column__items-title">The description for the image</h4>
                             <div class="column__items-text">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</div>
                         </div>
                     </div>
                     <div class="column__items">
-                        <div class="column__items-img"><img src="img/image_column_2.jpg" alt="image_column" ></div>
+                        <div class="column__items-img"><img src="img/image_column_2.jpg" alt="image_column"></div>
                         <div class="column__items-block">
                             <h4 class="column__items-title">The description for the image</h4>
                             <div class="column__items-text">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</div>
                         </div>
                     </div>
                     <div class="column__items">
-                        <div class="column__items-img"><img src="img/image_column_3.jpg" alt="image_column" ></div>
+                        <div class="column__items-img"><img src="img/image_column_3.jpg" alt="image_column"></div>
                         <div class="column__items-block">
                             <h4 class="column__items-title">The description for the image</h4>
                             <div class="column__items-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo at. Natus eos, eligendi illum rerum omnis porro ex, magni, explicabo veniam incidunt in quam sapiente ut ipsum.</div>
                         </div>
                     </div>
                     <div class="column__items">
-                        <div class="column__items-img"><img src="img/image_column_4.jpg" alt="image_column" ></div>
+                        <div class="column__items-img"><img src="img/image_column_4.jpg" alt="image_column"></div>
                         <div class="column__items-block">
                             <h4 class="column__items-title">The description for the image</h4>
                             <div class="column__items-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo at. Natus eos, eligendi illum rerum omnis porro ex, magni, explicabo veniam incidunt in quam sapiente ut ipsum.</div>
@@ -70,7 +100,6 @@
             <section class="vertical">
                 <h4 class="vertical__title title">Вертикальное выравнивание</h4>
                 <div class="vertical__block">
-                   <div class="vertical__block_centr">
                     <div class="vertical__item">
                         <h3 class="vertical__item-title">буду рад</h3>
                         <span class="vertical__item-coment">подписке</span>
@@ -97,7 +126,6 @@
                         <button name="vertical__item-button">комментировать</button>
                     </div>
                 </div>
-                </div>
             </section>
         </main>
         <footer class="footer">
@@ -105,4 +133,6 @@
         </footer>
     </div>
 
-</body></html>
+</body>
+
+</html>

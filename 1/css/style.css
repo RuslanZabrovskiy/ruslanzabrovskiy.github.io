@@ -28,6 +28,63 @@
     flex: 1 1 auto;
 }
 
+.title {
+    font-family: 'arial', 'verdana', sans-serif;
+    font-size: 30px;
+    line-height: 85%;
+    font-weight: 400;
+    color: #445161;
+}
+
+.menu {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu__items {
+    flex: 1 1 20%;
+    border-left: 3px solid black;
+    display: flex;
+}
+
+.menu__items:last-child {
+    border-right: 3px solid black;
+}
+
+.menu__items-link {
+    text-transform: uppercase;
+    padding: 20px 5px 20px 5px;
+    flex: 0 0 100%;
+    text-align: center;
+    font-family: 'arial', 'verdana', sans-serif;
+    font-size: 25px;
+    line-height: 85%;
+    font-weight: 400;
+    color: #445161;
+}
+
+label,
+#menu {
+    display: none;
+}
+
+.menu__items-link:hover {
+    color: green;
+}
+
+.menu__items-link:active {
+    color: blue;
+}
+
 .hi {
     padding: 50px;
     display: flex;
@@ -104,14 +161,6 @@
 .what__img > img {
     vertical-align: top;
     width: 100%;
-}
-
-.title {
-    font-family: 'arial', 'verdana', sans-serif;
-    font-size: 30px;
-    line-height: 85%;
-    font-weight: 400;
-    color: #445161;
 }
 
 .what__title {
@@ -202,11 +251,6 @@
 }
 
 .vertical__block {
-    max-width: 990px;
-    margin: 0 auto;
-}
-
-.vertical__block_centr {
     display: flex;
     justify-content: space-between;
 }
@@ -273,7 +317,7 @@ button[name=vertical__item-button] {
 }
 
 button[name=vertical__item-button]:hover {
-    background: red;
+    background: green;
 }
 
 button[name=vertical__item-button]:active {
@@ -300,6 +344,15 @@ button[name=vertical__item-button]:active {
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+    .menu {
+        padding: 20px 20px;
+    }
+
+    .menu__items-link {
+        padding: 20px 5px 20px 5px;
+    }
+
+
     .hi {
         padding: 20px;
         flex-direction: column-reverse;
@@ -314,11 +367,11 @@ button[name=vertical__item-button]:active {
     .hi__block-title {
         text-align: center;
     }
-    
+
     .hi__img {
         flex: 0 0 214px;
     }
-    
+
     .hi__img > img {
         vertical-align: top;
         width: 100%;
@@ -342,7 +395,7 @@ button[name=vertical__item-button]:active {
         margin: 0;
         flex: 0 0 186px;
     }
-    
+
     .what__img > img {
         vertical-align: top;
         width: 100%;
@@ -351,30 +404,30 @@ button[name=vertical__item-button]:active {
     .column {
         padding: 20px 20px 0 20px;
     }
-    
+
     .column__items {
         margin: 0 0 10px 0;
     }
-    
+
     .column__items-block {
         margin: 0 10px 0 10px;
     }
-    
+
     .column__items-img {
         flex: 0 0 150px;
     }
-    
+
     .column__items-img > img {
         vertical-align: top;
         width: 100%;
     }
-    
+
     .vertical {
         padding: 20px 20px 0 20px;
         flex-direction: column;
     }
 
-    .vertical__block_centr {
+    .vertical__block {
         justify-content: space-around;
         flex-wrap: wrap;
     }
@@ -387,6 +440,14 @@ button[name=vertical__item-button]:active {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
+    .menu {
+        padding: 20px 20px;
+    }
+
+    .menu__items-link {
+        padding: 20px 5px 20px 5px;
+    }
+
     .hi {
         padding: 20px;
         flex-direction: column-reverse;
@@ -401,11 +462,11 @@ button[name=vertical__item-button]:active {
     .hi__block-title {
         text-align: center;
     }
-    
+
     .hi__img {
         flex: 0 0 214px;
     }
-    
+
     .hi__img > img {
         vertical-align: top;
         width: 100%;
@@ -429,7 +490,7 @@ button[name=vertical__item-button]:active {
         margin: 0;
         flex: 0 0 186px;
     }
-    
+
     .what__img > img {
         vertical-align: top;
         width: 100%;
@@ -438,26 +499,26 @@ button[name=vertical__item-button]:active {
     .column {
         padding: 20px 20px 0 20px;
     }
-    
+
     .column__items-block {
         margin: 0 10px 0 10px;
     }
-    
+
     .column__items-img {
         flex: 0 0 150px;
     }
-    
+
     .column__items-img > img {
         vertical-align: top;
         width: 100%;
     }
-    
+
     .vertical {
         padding: 20px 20px 0 20px;
         flex-direction: column;
     }
 
-    .vertical__block_centr {
+    .vertical__block {
         justify-content: space-around;
         flex-wrap: wrap;
     }
@@ -471,6 +532,126 @@ button[name=vertical__item-button]:active {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+    .menu {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .visuallyHidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        display: block;
+    }
+
+    .hamburger {
+        margin: 0 auto;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .hamburger .bar {
+        padding: 0;
+        width: 30px;
+        height: 4px;
+        background-color: maroon;
+        display: block;
+        border-radius: 4px;
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+    }
+
+    .bar1 {
+        top: 0;
+    }
+
+    .bar2,
+    .bar3 {
+        top: 13.5px;
+    }
+
+    .bar3 {
+        right: 0;
+    }
+
+    .bar4 {
+        bottom: 0;
+    }
+
+    .hamburger3 .bar1 {
+        transform-origin: 5%;
+    }
+
+    .hamburger3 .bar4 {
+        transform-origin: 5%;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar1 {
+        transform: rotate(45deg);
+        height: 3px;
+        width: 42px;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar3 {
+        transform: rotate(45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar2 {
+        transform: rotate(-45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar4 {
+        transform: rotate(-45deg);
+        height: 3px;
+        width: 42px;
+    }
+
+    .menu__list {
+        height: 0;
+        visibility: hidden;
+        margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu__items {
+        text-align: center;
+        background-color: #ccc;
+        margin-top: 2px;
+        border: 2px solid #333333;
+    }
+
+    .menu__items:last-child {
+        border: 2px solid #333333;
+    }
+
+    .menu__items-link {
+        padding: 15px 5px 15px 5px;
+    }
+
+
+    input[type="checkbox"]:checked ~ .menu__list {
+        height: auto;
+        visibility: visible;
+        margin: 15px auto 0 auto;
+    }
+
     .hi {
         padding: 20px;
         flex-direction: column-reverse;
@@ -485,7 +666,7 @@ button[name=vertical__item-button]:active {
     .hi__block-title {
         text-align: center;
     }
-    
+
     .hi__img {
         flex: 0 0 200px;
     }
@@ -500,7 +681,7 @@ button[name=vertical__item-button]:active {
         flex-direction: column-reverse;
         align-items: center;
     }
-    
+
     .title {
         text-align: center;
     }
@@ -513,7 +694,7 @@ button[name=vertical__item-button]:active {
         margin: 0;
         flex: 0 0 186px;
     }
-    
+
     .what__img > img {
         vertical-align: top;
         width: 100%;
@@ -527,16 +708,16 @@ button[name=vertical__item-button]:active {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .column__items-img {
         flex: 0 0 200px;
     }
-    
+
     .column__items-img > img {
         vertical-align: top;
         width: 100%;
     }
-    
+
     .column__items-block {
         margin: 0 0 0 15px;
     }
@@ -546,7 +727,7 @@ button[name=vertical__item-button]:active {
         flex-direction: column;
     }
 
-    .vertical__block_centr {
+    .vertical__block {
         justify-content: space-around;
         flex-wrap: wrap;
     }
@@ -557,6 +738,126 @@ button[name=vertical__item-button]:active {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+    
+    .menu {
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .visuallyHidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        display: block;
+    }
+
+    .hamburger {
+        margin: 0 auto;
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+
+    .hamburger .bar {
+        padding: 0;
+        width: 30px;
+        height: 4px;
+        background-color: maroon;
+        display: block;
+        border-radius: 4px;
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+    }
+
+    .bar1 {
+        top: 0;
+    }
+
+    .bar2,
+    .bar3 {
+        top: 13.5px;
+    }
+
+    .bar3 {
+        right: 0;
+    }
+
+    .bar4 {
+        bottom: 0;
+    }
+
+    .hamburger3 .bar1 {
+        transform-origin: 5%;
+    }
+
+    .hamburger3 .bar4 {
+        transform-origin: 5%;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar1 {
+        transform: rotate(45deg);
+        height: 3px;
+        width: 42px;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar3 {
+        transform: rotate(45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar2 {
+        transform: rotate(-45deg);
+        height: 3px;
+        background-color: transparent;
+    }
+
+    .checkbox3:checked + label > .hamburger3 > .bar4 {
+        transform: rotate(-45deg);
+        height: 3px;
+        width: 42px;
+    }
+
+    .menu__list {
+        height: 0;
+        visibility: hidden;
+        margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu__items {
+        text-align: center;
+        background-color: #ccc;
+        margin-top: 2px;
+        border: 2px solid #333333;
+    }
+
+    .menu__items:last-child {
+        border: 2px solid #333333;
+    }
+
+    .menu__items-link {
+        padding: 15px 5px 15px 5px;
+    }
+
+
+    input[type="checkbox"]:checked ~ .menu__list {
+        height: auto;
+        visibility: visible;
+        margin: 15px auto 0 auto;
+    }
 
     .hi {
         padding: 15px 10px;
@@ -574,7 +875,7 @@ button[name=vertical__item-button]:active {
         margin: 0 0 20px 0;
         text-align: center;
     }
-    
+
     .hi__img {
         flex: 0 0 214px;
     }
@@ -643,12 +944,12 @@ button[name=vertical__item-button]:active {
         vertical-align: top;
         margin: 0 0 10px 0;
     }
-    
+
     .column__items-img > img {
         vertical-align: top;
         width: 100%;
     }
-    
+
     .column__items-block {
         margin: 0;
     }
@@ -663,7 +964,7 @@ button[name=vertical__item-button]:active {
         flex-direction: column;
     }
 
-    .vertical__block_centr {
+    .vertical__block {
         flex-wrap: wrap;
         justify-content: space-around;
     }
