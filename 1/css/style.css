@@ -54,6 +54,7 @@
     flex: 1 1 20%;
     border-left: 3px solid black;
     display: flex;
+    align-items: center;
 }
 
 .menu__items:last-child {
@@ -79,7 +80,7 @@ label,
 
 .menu__items-link:hover {
     color: green;
-    transform: scale(1.2);
+    transform: scale(0.8);
 }
 
 .menu__items-link:active {
@@ -215,7 +216,7 @@ label,
     background-image: url(../img/photo-3.jpg);
 }
 
-.summary{
+.summary {
     padding: 20px 50px;
 }
 
@@ -280,6 +281,7 @@ label,
 .summary__img {
     padding: 5px;
 }
+
 .summary__img > img {
     max-width: 100%;
 }
@@ -311,7 +313,7 @@ label,
 
 .what__text {
     font-family: 'arial', 'verdana', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     color: #333333;
@@ -367,19 +369,21 @@ label,
 
 .column__items-title {
     font-family: 'arial', 'verdana', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 85%;
     font-weight: 400;
     color: #445161;
     margin: 0 0 15px 0;
+    text-align: center;
 }
 
 .column__items-text {
     font-family: 'arial', 'verdana', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     color: #333333;
+    text-align: center;
 }
 
 .vertical {
@@ -438,7 +442,7 @@ label,
 
 .vertical__item-text {
     font-family: 'arial', 'verdana', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     color: #ffffff;
@@ -525,8 +529,8 @@ button[name=vertical__item-button]:active {
         vertical-align: top;
         width: 100%;
     }
-    
-    .summary{
+
+    .summary {
         padding: 20px;
     }
 
@@ -631,8 +635,8 @@ button[name=vertical__item-button]:active {
         vertical-align: top;
         width: 100%;
     }
-    
-    .summary{
+
+    .summary {
         padding: 20px;
     }
 
@@ -851,8 +855,8 @@ button[name=vertical__item-button]:active {
         vertical-align: top;
         width: 100%;
     }
-    
-    .summary{
+
+    .summary {
         padding: 20px;
     }
 
@@ -886,7 +890,7 @@ button[name=vertical__item-button]:active {
 
     .column__block {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .column__items-img {
@@ -900,6 +904,11 @@ button[name=vertical__item-button]:active {
 
     .column__items-block {
         margin: 0 0 0 15px;
+    }
+
+    .column__items-text,
+    .column__items-title {
+        text-align: left;
     }
 
     .vertical {
@@ -1078,8 +1087,8 @@ button[name=vertical__item-button]:active {
         object-fit: none;
         object-position: center;
     }
-    
-    .summary{
+
+    .summary {
         padding: 15px 10px;
     }
 
