@@ -85,6 +85,79 @@ label,
     color: blue;
 }
 
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+    background-size: cover;
+    position: relative;
+    border-image: url(../img/photo-1.jpg);
+    background-size: 100% 100%;
+}
+
+.slider-container-menu {
+    position: absolute;
+    left: 46.5%;
+    z-index: 900;
+    bottom: 0;
+}
+
+.slider-container-menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50px;
+    margin: 0 .2em 1em;
+}
+
+.slide {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: left 0s .75s;
+}
+
+[id^="slide"]:checked + .slide {
+    left: 0px;
+    z-index: 100;
+    transition: left .65s ease-out;
+}
+
+#slide-dot-1 {
+    display: none;
+}
+
+#slide-dot-2 {
+    display: none;
+}
+
+#slide-dot-3 {
+    display: none;
+}
+
+.slide-1 {
+    background-image: url(../img/photo-1.jpg);
+}
+
+.slide-2 {
+    background-image: url(../img/photo-2.jpg);
+}
+
+.slide-3 {
+    background-image: url(../img/photo-3.jpg);
+}
+
 .hi {
     padding: 50px;
     display: flex;
@@ -352,6 +425,12 @@ button[name=vertical__item-button]:active {
         padding: 20px 5px 20px 5px;
     }
 
+    .slider-container-menu {
+        position: absolute;
+        left: 45.4%;
+        z-index: 900;
+        bottom: 0;
+    }
 
     .hi {
         padding: 20px;
@@ -446,6 +525,13 @@ button[name=vertical__item-button]:active {
 
     .menu__items-link {
         padding: 20px 5px 20px 5px;
+    }
+
+    .slider-container-menu {
+        position: absolute;
+        left: 45.4%;
+        z-index: 900;
+        bottom: 0;
     }
 
     .hi {
@@ -652,6 +738,13 @@ button[name=vertical__item-button]:active {
         margin: 15px auto 0 auto;
     }
 
+    .slider-container-menu {
+        position: absolute;
+        left: 42.5%;
+        z-index: 900;
+        bottom: 0;
+    }
+
     .hi {
         padding: 20px;
         flex-direction: column-reverse;
@@ -665,6 +758,11 @@ button[name=vertical__item-button]:active {
 
     .hi__block-title {
         text-align: center;
+    }
+
+    .hi__list-item {
+        line-height: 100%;
+        margin: 0 0 10px 0;
     }
 
     .hi__img {
@@ -738,7 +836,7 @@ button[name=vertical__item-button]:active {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    
+
     .menu {
         padding: 15px 10px;
         display: flex;
@@ -835,6 +933,7 @@ button[name=vertical__item-button]:active {
         margin: 0 auto;
         width: 100%;
         flex-direction: column;
+
     }
 
     .menu__items {
@@ -859,6 +958,13 @@ button[name=vertical__item-button]:active {
         margin: 15px auto 0 auto;
     }
 
+    .slider-container-menu {
+        position: absolute;
+        left: 38.8%;
+        z-index: 900;
+        bottom: 0;
+    }
+
     .hi {
         padding: 15px 10px;
         flex-direction: column-reverse;
@@ -871,9 +977,14 @@ button[name=vertical__item-button]:active {
     }
 
     .hi__block-title {
-        font-size: 42px;
+        font-size: 40px;
         margin: 0 0 20px 0;
         text-align: center;
+    }
+
+    .hi__list-item {
+        line-height: 100%;
+        margin: 0 0 10px 0;
     }
 
     .hi__img {
@@ -893,7 +1004,7 @@ button[name=vertical__item-button]:active {
     }
 
     .title {
-        font-size: 30px;
+        font-size: 28px;
         line-height: 85%;
         text-align: center;
     }

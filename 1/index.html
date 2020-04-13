@@ -12,23 +12,23 @@
 <body>
     <div class="body">
         <main class="main">
-            <section class="menu">
-              
-              <input type="checkbox" id="menu" class="checkbox3 visuallyHidden">
-        <label for="menu">
-            <div class="hamburger hamburger3">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
-            </div>
-        </label>
+           <section class="menu">
+                <input type="checkbox" id="menu" class="checkbox3 visuallyHidden">
+                <label for="menu">
+                    <div class="hamburger hamburger3">
+                        <span class="bar bar1"></span>
+                        <span class="bar bar2"></span>
+                        <span class="bar bar3"></span>
+                        <span class="bar bar4"></span>
+                    </div>
+                </label>
                 <ul class="menu__list">
                     <li class="menu__items"><a href="#one" class="menu__items-link">Один</a></li>
                     <li class="menu__items "><a href="#two" class="menu__items-link">Два</a></li>
                     <li class="menu__items"><a href="#three" class="menu__items-link">Три</a></li>
                     <li class="menu__items"><a href="#four" class="menu__items-link">Четыре</a></li>
                     <li class="menu__items"><a href="#five" class="menu__items-link">Пять</a></li>
+                    <li class="menu__items"><a href="#six" class="menu__items-link">Шесть</a></li>
                 </ul>
             </section>
             <section class="hi" id="one">
@@ -43,7 +43,25 @@
                 </div>
                 <div class="hi__img"><img src="img/shape_hi.jpg" alt="shape_hi"></div>
             </section>
-            <section class="what" id="two">
+            <section class="gallery-container" id="two">
+                <div class="slider-container">
+                    <div class="slider-container-menu">
+                        <label for="slide-dot-1"></label>
+                        <label for="slide-dot-2"></label>
+                        <label for="slide-dot-3"></label>
+                    </div>
+                </div>
+
+                <input id="slide-dot-1" type="radio" name="slides" checked>
+                <div class="slide slide-1"></div>
+
+                <input id="slide-dot-2" type="radio" name="slides">
+                <div class="slide slide-2"></div>
+
+                <input id="slide-dot-3" type="radio" name="slides">
+                <div class="slide slide-3"></div>
+            </section>
+            <section class="what" id="three">
                 <div class="what__img"><img src="img/video_what.jpg" alt="video_what"></div>
                 <div class="what__block">
                     <h3 class="what__title title">Что такое FlexBox?</h3>
@@ -53,7 +71,7 @@
                     </div>
                 </div>
             </section>
-            <section class="column" id="three">
+            <section class="column" id="four">
                 <h3 class="column__title title">Колонки с flex-контейнерами</h3>
                 <div class="column__block">
                     <div class="column__items">
@@ -86,7 +104,7 @@
                     </div>
                 </div>
             </section>
-            <section class="vertical" id="four">
+            <section class="vertical" id="five">
                 <h4 class="vertical__title title">Вертикальное выравнивание</h4>
                 <div class="vertical__block">
                     <div class="vertical__item">
@@ -117,11 +135,9 @@
                 </div>
             </section>
         </main>
-        <footer class="footer" id="five">
+        <footer class="footer" id="six">
             <span class="footer__text">Фрилансер по жизни 2019</span>
         </footer>
     </div>
 
-</body>
-
-</html>
+</body></html>
