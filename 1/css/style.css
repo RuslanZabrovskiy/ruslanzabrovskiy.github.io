@@ -79,6 +79,7 @@ label,
 
 .menu__items-link:hover {
     color: green;
+    transform: scale(1.2);
 }
 
 .menu__items-link:active {
@@ -101,7 +102,7 @@ label,
 .slider-container-menu {
     position: absolute;
     left: 46.5%;
-    z-index: 900;
+    z-index: 3;
     bottom: 0;
 }
 
@@ -121,7 +122,7 @@ label,
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -130,7 +131,7 @@ label,
 
 [id^="slide"]:checked + .slide {
     left: 0px;
-    z-index: 100;
+    z-index: 2;
     transition: left .65s ease-out;
 }
 
