@@ -32,8 +32,8 @@
     font-family: 'arial', 'verdana', sans-serif;
     font-size: 30px;
     line-height: 85%;
-    font-weight: 400;
-    color: #445161;
+    font-weight: 700;
+    color: green;
 }
 
 .menu {
@@ -51,46 +51,35 @@
 }
 
 .menu__items {
+    display: flex;
+    margin: 0 3px 0 0;
     flex: 1 1 20%;
     border-radius: 40px;
-    display: flex;
-    align-items: center;
-    margin: 0 3px 0 0;
+    min-height: 100px;
 }
 
-.menu__items:last-child {
-    margin: 0 0 0 0;
+.menu__items > span {
+    align-self:center;
+    text-align: center;
+    width: 100%;
 }
 
 .menu__items:nth-child(3n+1) {
-    border: 5px solid red;
-}
-
-.menu__items:nth-child(3n+1)>a {
-    color:chartreuse ;
-}
-
-.menu__items:nth-child(3n+2) {
     border: 5px solid darkorchid;
 }
 
-.menu__items:nth-child(3n+2)>a {
-    color: darkorchid;
+.menu__items:nth-child(3n+2) {
+    border: 5px solid red;
 }
 
 .menu__items:nth-child(3n+3) {
     border: 5px solid green;
 }
 
-.menu__items:nth-child(3n+3)>a {
-    color: red;
-}
-
 .menu__items-link {
+    display: block;
     text-transform: uppercase;
     padding: 20px 5px 20px 5px;
-    flex: 0 0 100%;
-    text-align: center;
     font-family: 'arial', 'verdana', sans-serif;
     font-size: 25px;
     line-height: 1.2;
@@ -98,18 +87,44 @@
     color: #445161;
 }
 
+.menu__items:nth-child(3n+1) .menu__items-link {
+    color: chartreuse;
+}
+
+.menu__items:nth-child(3n+2) .menu__items-link {
+    color: darkorchid;
+}
+
+.menu__items:nth-child(3n+3) .menu__items-link {
+    color: red;
+}
+
+.menu__items:hover{
+    transform: scale(0.8);
+    border: 5px solid orange;
+}
+
+.menu__items:active {
+    border: 5px solid purple;
+}
+
+.menu__items:nth-child(3n+1) .menu__items-link:hover,
+.menu__items:nth-child(3n+2) .menu__items-link:hover,
+.menu__items:nth-child(3n+3) .menu__items-link:hover {
+    color: green;
+    font-weight: 700;
+}
+
+.menu__items:nth-child(3n+1) .menu__items-link:active,
+.menu__items:nth-child(3n+2) .menu__items-link:active,
+.menu__items:nth-child(3n+3) .menu__items-link:active {
+    color: blue;
+    font-weight: 700;
+}
+
 label,
 #menu {
     display: none;
-}
-
-.menu__items-link:hover {
-    color: green;
-    transform: scale(0.8);
-}
-
-.menu__items-link:active {
-    color: blue;
 }
 
 .hi {
@@ -335,6 +350,17 @@ summary {
     float: left;
     width: 25px;
     height: 25px;
+}
+
+.summary__text-title{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: purple;
+    font-family: 'arial', 'verdana', sans-serif;
+    font-size: 30px;
+    line-height: 85%;
+    font-weight: 400;
 }
 
 .summary__text {
@@ -873,11 +899,6 @@ button[name=vertical__item-button]:active {
         text-align: center;
         background-color: #ccc;
         margin-top: 2px;
-        border: 2px solid #333333;
-    }
-
-    .menu__items:last-child {
-        border: 2px solid #333333;
     }
 
     .menu__items-link {
@@ -1102,11 +1123,6 @@ button[name=vertical__item-button]:active {
         text-align: center;
         background-color: #ccc;
         margin-top: 2px;
-        border: 2px solid #333333;
-    }
-
-    .menu__items:last-child {
-        border: 2px solid #333333;
     }
 
     .menu__items-link {
