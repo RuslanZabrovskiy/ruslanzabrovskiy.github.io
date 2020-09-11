@@ -496,6 +496,7 @@ summary {
 .vertical__block {
     display: flex;
     justify-content: space-between;
+    align-items:flex-start;
 }
 
 .vertical__item {
@@ -517,6 +518,7 @@ summary {
     text-transform: uppercase;
     color: #ffffff;
     padding: 15px;
+    text-align: center;
 }
 
 .vertical__item-coment {
@@ -530,11 +532,12 @@ summary {
     display: flex;
     justify-content: center;
     border-radius: 20px;
+    text-align: center;
 }
 
 .vertical__item-block-text {
     padding: 20px 20px 0 20px;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
 }
 
 .vertical__item-text {
@@ -544,6 +547,7 @@ summary {
     font-weight: 400;
     color: #ffffff;
     margin: 0 0 20px 0;
+    text-align: center;
 }
 
 button[name=vertical__item-button] {
